@@ -42,27 +42,88 @@
         <li></li>
     </ul> <!--emmet: ul.cica#kutya>li*5-->
 
-    <!--Táblázat-->
+    <!--TÁBLÁZAT-->
     <table>
+        <caption>TÁBLÁZAT CÍME</caption>
         <thead>
             <tr>
-                <th></th> <!--fejléc cella-->
-            </tr> <!--tálázat sora-->
-        </thead> <!--fejléc-->
+                <th rowspan="2">Adat</th> <!--fejléc cella, sorok összevonása-->
+            </tr> <!--táblázat sora-->
+        </thead> <!--a táblázat fejléce-->
         <tbody>
             <tr>
-                <td></td> <!--adat cella-->
-                <td></td>
+                <td>Cica</td> <!--adat cella-->
+                <td>Kutya</td>
+                <td colspan="2">Madár</td> <!--oszlopok összevonása-->
             </tr>
         </tbody> <!--táblázat törzse-->
         <tfoot>
-            
-        </tfoot> <!--lábléc-->
-    </table> <!--emmet (gyorskód): table>tr*4>td*2 ez egy 2 oszlopos 4-->
+            <td></td>
+            <td></td>
+        </tfoot> <!--a táblázat lábléce-->
+    </table>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> <!--emmet (gyorskód): table>tr*4>td*2 ez egy 2 oszlopos 4 soros táblázat-->
     <div></div> <!--keret-->
     <b></b> vagy <strong></strong> <!--félkövér betüs szöveg-->
     <i></i> vagy <em></em> <!--dölt betüs szöveg-->
     <u></u> <!--aláhúzott szöveg-->
-    <span></span> <!--egyedileg formázott szöveg-->     
+    <span></span> <!--egyedileg formázott szövegnél alkalmazzuk-->
+    <form action=""> <!--űrlap készítése-->
+        <fieldset> <!--részekre bontható általa az űrlap, pl.: személyes adatok rész, szegélyt rak az adott rész köré-->
+            <legend>Személyes adatok</legend> <!--az adott rész címének beállítása, pl.: személyes adatok-->
+            <label for="nev">NÉV:</label> <!--megnevezés-->
+            <input type="text" name="nev" id="nev" placeholder="Kiss István">
+            <!--beviteli mező, sokféle típus van, egyedi azonosítóval a label összekapcsolható, a placeholderbe beírt szöveg segítséget ad a felhasználónak az űrlap kitöltésében-->
+            <!--input type lehet:
+            - szöveg (text),
+            - jelölő négyzet (checkbox) - ha több választás lehetséges,
+            - rádió gomb (radio) - egy választás lehetséges,
+            - email cím (email),
+            - szám (number),
+            - dátum (date),
+            - jelszó (password),
+            - idő (time)
+            stb., DE én csak a fent leírtakat fogom kérdezni!!-->
+        </fieldset>
+        <button type="button">GOMB</button> <!--gomb-->
+        <!--gombot kétféleképpen lehet hozzáadni a weboldalhoz:
+        1. input "tag" type="button" (sima gomb), type="submit" (Küldés), type="reset" (visszaállítás)
+        Ha beállítunk value-t (értéket), akkor csak azt fogja kiírni a gombra, amennyiben ezt kihagyjuk a böngésző a saját erre alkalmazott beállítását fogja használni az általad használt operációs rendszer nyelvén.
+        2. button "tag"type="button" (sima gomb), type="submit" (Küldés), type="reset" (visszaállítás)-->
+        <label for="uzenet">Üzenet a szakácsnak:</label>
+        <textarea name="message" id="uzenet" cols="30" rows="10"></textarea> <!--szövegmező nagyobb terjedelmű szövegek írása esetén pl.: Üzenet a szakácsnak: Nem kérek rukkolát a pizzára!-->
+        <label for="cars">AUTÓK:</label>
+        <select name="autok" id="cars"> <!--lenyíló menüs választási lehetőség-->
+            <option value=""></option> <!--lenyíló menü eleme-->
+            <option value="">Audi</option>
+            <option value="">BMW</option>
+            <option value="">Ford</option>
+            <option value="">Fiat</option>
+        </select>
+    </form>
+    <nav></nav> <!--menürendszer kialakítása-->
+    <header></header> <!--fejléc a body-n belül-->
+    <footer></footer> <!--lábléc a body-n belül-->
+    <p>P<sub>1</sub></p> <!--alsó index-->
+    <p>m<sup>2</sup></p> <!--felső index-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3QakihAEwoU?si=pQ-vWgNP-8DxB9ty" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <!--videókat lehet beilleszteni a weboldalra-->
+         
 </body>
 </html>
